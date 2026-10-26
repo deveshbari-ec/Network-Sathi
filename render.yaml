@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: networksathi
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: AI_MODEL
+        value: gemini-flash-lite-latest
+      - key: GEMINI_API_KEY
+        sync: false
